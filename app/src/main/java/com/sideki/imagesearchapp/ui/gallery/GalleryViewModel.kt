@@ -9,7 +9,7 @@ import androidx.paging.cachedIn
 import com.sideki.imagesearchapp.data.UnsplashRepository
 
 /**
- * 1) После создания [UnsplashPaggingSource], провода его в [UnsplashRepository] создаем -
+ * 1) После создания [UnsplashPaggingSource] и провода его в [UnsplashRepository] создаем -
  * [companion_object], переменные [currentQuery] и [photos] и функцию [searchPhotos]
  */
 

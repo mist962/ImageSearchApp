@@ -7,26 +7,31 @@
 5) Создаем item_unsplash_photo.xml для UnsplashPhoto
 
 6) Создаем Fragment GalleryFragment в package - ui.gallery c аннотацией @AndroidEntryPoint
-7) Заполняем fragment_gallery.xml необходимыми View - RecycerView, Button, ProgressBar, TextView
+7) Используем ViewBinding. Создаем переменую _binding и биндим ее к view
+8) Заполняем fragment_gallery.xml необходимыми View - RecycerView, Button, ProgressBar, TextView
 
-8) Создаем class ImageSearchApplication : Application() с аннотацией @HiltAndroidApp и прописываем в AndroidManifest
+9) Создаем class ImageSearchApplication : Application() с аннотацией @HiltAndroidApp и прописываем в AndroidManifest
 
-9) Создаем interface UnsplashApi в package - api
+10) Создаем interface UnsplashApi в package - api
 
-10) Создаем object AppModule в package - di c аннотацией @Module и @InstallIn(ApplicationComponent::class)
-11) В AppModule создаем методыв provideRetrofit() и provideUnsplashApi() с аннотацией @Provides и @Singleton,
+11) Создаем object AppModule в package - di c аннотацией @Module и @InstallIn(ApplicationComponent::class)
+12) В AppModule создаем методыв provideRetrofit() и provideUnsplashApi() с аннотацией @Provides и @Singleton,
 нам нужен Retrofit в едином экземляре на все приложение
 
-12) Создаем class UnsplashRepository с аннтотациями @Inject и @Singleton, так же в конструкторе проводим UnsplashApi
+13) Создаем class UnsplashRepository с аннтотациями @Inject и @Singleton, так же в конструкторе проводим UnsplashApi
 
-13) Создаем class GalleryViewModel с аннотацией @ViewModelInject и в конструкторе проводим UnsplashRepository
+14) Создаем class GalleryViewModel с аннотацией @ViewModelInject и в конструкторе проводим UnsplashRepository
 
-14) Создаем class UnsplashPaggingSource (внутри класса есть инструкция)
+15) Создаем class UnsplashPaggingSource (внутри класса есть инструкция)
 
-15) Добавляем в UnsplashRepository метод getSearchResults()
+16) Добавляем в UnsplashRepository метод getSearchResults()
 
-16) Добавляем в GalleryViewModel companion object, переменные currentQuery, photos и функцию  searchPhotos()
+17) Добавляем в GalleryViewModel companion object, переменные currentQuery, photos и функцию  searchPhotos()
 
-17) Создаем переменную viewModel в GalleryFragment
-18) Обсервим viewModel на photos
+18) Создаем переменную viewModel в GalleryFragment и Обсервим viewModel на photos
+
+19) Создаем class UnsplashPhotoAdapter в package - ui.gallery (В классе все объясненно) ! МОЖЕТ БЫТЬ ОШИБКА
+20) Инициализируем UnsplashPhotoAdapter в GalleryFragment
+21) Привязываем RecyclerView
+22) Передаем параеметры через viewModel.photos
 
