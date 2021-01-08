@@ -1,4 +1,4 @@
-package com.sideki.imagesearchapp
+package com.sideki.imagesearchapp.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
