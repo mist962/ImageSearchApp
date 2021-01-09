@@ -35,3 +35,29 @@
 21) Привязываем RecyclerView
 22) Передаем параеметры через viewModel.photos
 
+----------------------Добавляем ProgressBar внизу сраницы и кнопку Retry при отсутствии интернета----------------------
+23) Создаем layout -  unsplash_photo_load_state_footer
+24) Создаем UnsplashPhotoLoadStateAdapter в package - ui.gallery (В классе все объяснено)
+25) Добавляем .withLoadStateHeaderAndFooter() к адаптеру в GalleryFragment
+
+----------------------Добавляем фунецию поиска----------------------
+26) Создаем menu_gallery.xml в menu
+27) Овверайдим метод onCreateOptionsMenu() в GalleryFragment
+28) Добавляем adapter.addLoadStateListener{} в GalleryFragment
+28) Добавляем buttonRetry.setOnClickListener{} в GalleryFragment
+
+----------------------Добавляем Detail Screen----------------------
+29) Создаем fragment_details.xml
+30) Создаем DetailsFragment в package - ui.details
+31) Добавляем Fragment в nav_graph
+32) Добавляем в Arguments фрагмента UnsplashPhoto для SafeArgs
+33) В UnsplashPhotoAdapter читаем инструкцию по привязке кликов к обекту
+34) в GalleryFragment читаем инструкцию по кликам
+35) Читаем инструкцию в DetailsFragment
+
+36) В MainActivity добавляем navController
+
+----------------------Сохраняем состояние после перезапуска----------------------
+37) В ViewModel читаем инструкцию сохранение состояния
+
+
